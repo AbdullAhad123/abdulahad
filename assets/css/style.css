@@ -237,11 +237,12 @@
     /* background: linear-gradient(45deg, #fdfdfd, #f4f4f4); */
     transition: 0.3s;
     border: 1px solid #0c2f6e;
-    background: #4d6a9e3b;
+    background: #4d699e04;
 }
 
 .upworkCard:hover {
     scale: 1.04;
+    background: #00339123;
 }
 
 .featuredCard {

@@ -1,5 +1,6 @@
 #hero {
-    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
     width: auto;
     position: relative;
 }
@@ -13,20 +14,13 @@
     position: relative;
 }
 
-/* .scrollDownMouse {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-} */
-
 .mouse {
     width: 25px;
     height: 40px;
     border: 2px solid var(--dark_primary);
     border-radius: 60px;
     position: relative;
+
     &::before {
         content: '';
         width: 5px;
@@ -57,27 +51,10 @@
     }
 }
 
-.videoBg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-}
-
-.herobannerSection {
-    height: auto;
-    width: auto;
-    padding: 1rem 0;
-}
-
 .heroBanner {
     height: fit-content;
     width: auto;
-    background: linear-gradient(to top, #000000, #252525);
+    background: linear-gradient(to top, #0e121d, #1b2548);
     position: relative;
     overflow: hidden;
     border-radius: 30px;
@@ -89,9 +66,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    height: 100%;
-    width: 100%;
+    height: 100% !important;
+    width: 100% !important;
 }
+
 /* services  */
 .serviceCard {
     min-height: 300px;
@@ -119,22 +97,21 @@
     border: 1px solid #669a62;
 }
 
+.serviceApp img{
+    filter: drop-shadow(6px 10px 10px #0000005e);
+}
+
 .serviceWeb {
     background: url(../img/download.png) fixed, linear-gradient(0deg, #E9EDC9, #E9EDC9);
 }
 
+.serviceWeb img{
+    filter: drop-shadow(0px 1px 6px #0000005e)
+}
+ 
 .serviceWeb .serviceStackPill {
     color: #ac9242;
     border: 1px solid #c0aa67;
-}
-
-.serviceDesigning {
-    background: url(../img/download.png) fixed, linear-gradient(0deg, #f1e0ff, #f1e0ff);
-}
-
-.serviceDesigning .serviceStackPill {
-    color: #785297;
-    border: 1px solid #9975b7;
 }
 
 .serviceMarketing {
@@ -144,4 +121,262 @@
 .serviceMarketing .serviceStackPill {
     color: #548662;
     border: 1px solid #6e9a7a;
+}
+.serviceMarketing img{
+    filter: drop-shadow(6px 10px 10px #0000005e);
+}
+
+
+
+
+/* index css  */
+::selection {
+    background: var(--primary) !important;
+    color: #f4f4f4 !important;
+    -webkit-text-fill-color: #f4f4f4 !important;
+}
+
+#tutorsElevenPlus {
+    background: url(../img/TutorsElevenPlus.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#trolleymate {
+    background: url(../img/trolleymate.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#interstate {
+    background: url(../img/interstate.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#oneli {
+    background: url(../img/oneli_builders.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* solutions  */
+.solutionCard {
+    height: 100%;
+    width: auto;
+    border-radius: 30px;
+    background: #0d0d0d6e;
+    border: 1px solid #1163fb36;
+    transition: 0.3s;
+    perspective: 100px;
+    transform: rotate3d(1, 1, 1, -10deg);
+}
+
+.solutionCard:hover {
+    transform: rotate3d(1, 1, 1, 0deg);
+    scale: 1.03;
+}
+
+.solutionCardIcon {
+    height: 50px;
+    width: 50px;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.solutionsNamekPill {
+    padding: 0.5rem 1.2rem;
+    font-size: 12px;
+    border-radius: 10rem;
+    user-select: none;
+    border: 1px solid #adcaffe3;
+    color: #9ec0ffeb;
+    margin: 0.1rem 0;
+}
+
+.projectServicePill {
+    padding: 0.5rem 1.2rem;
+    font-size: 14px;
+    border-radius: 10rem;
+    user-select: none;
+    border: 1px solid #c5ffe4be;
+    color: #c5ffe4be;
+    margin: 0.1rem 0;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+/* packagesCard  */
+/* footer */
+.footer {
+    height: auto;
+    width: 100%;
+    background: url(../img/download.png), linear-gradient(0deg, #090909, #090909);
+    position: relative;
+}
+
+.footerShade {
+    background: #1e274766;
+}
+
+/* nav  */
+
+
+.upworkCard {
+    height: auto;
+    width: auto;
+    /* background: linear-gradient(45deg, #fdfdfd, #f4f4f4); */
+    transition: 0.3s;
+    border: 1px solid #0c2f6e;
+    background: #4d6a9e3b;
+}
+
+.upworkCard:hover {
+    scale: 1.04;
+}
+
+.featuredCard {
+    height: auto;
+    width: auto;
+    border: 2px solid #1163fb6b;
+    border-radius: 20px;
+}
+
+/* rojects  */
+.featuredProjectCard {
+    height: auto;
+    border-radius: 30px;
+    background: #0d0d0d6e;
+    border: 1px solid #1163fb36;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.featuredProjectBanner {
+    height: 450px;
+    width: auto;
+    overflow: hidden;
+}
+
+.featuredProjectBanner img {
+    height: auto !important;
+    width: 100% !important;
+    transition: transform 5s;
+    transform: translateY(0);
+}
+
+.featuredProjectDetails {
+    box-shadow: 0px -5px 10px 0px #00000073;
+    position: relative;
+}
+
+/* testimonialAvatar */
+
+.testimonialCard {
+    height: 100%;
+    width: auto;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #0020561c, #5076ff4d);
+    border: 1px solid #1163fb36;
+}
+
+.testimonialAvatar {
+    height: 50px;
+    width: 50px;
+    background: #add8e6;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #000000f6;
+    font-weight: 500;
+}
+
+.social_links_box {
+    height: 36px;
+    width: 36px;
+    background: transparent;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 0px #00000061;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.bg_whatsapp {
+    background: #1b6d51;
+    color: white;
+}
+
+.bg_envelope {
+    background: #ebebeb;
+    color: #d33333;
+}
+
+.bg_upwork {
+    background: #15A401;
+    color: white;
+}
+
+.bg_github {
+    background: #722372;
+    color: white;
+}
+
+.bg_stackoverflow {
+    background: white;
+    color: #F58832;
+}
+
+/* about  */
+.timelineContainer {
+    width: 50px;
+}
+
+.timeline {
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(125deg, #6da1ff21, #4687ff, #6da1ff21);
+    margin: auto;
+}
+
+.aboutContentDot {
+    height: 20px;
+    width: 20px;
+    background: linear-gradient(125deg, #0ea6ff, #002a77);
+    box-shadow: 0 0 6px 3px #005aff36;
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: -28px;
+    transform: translateY(-50%);
+    animation: drop_box 5s linear infinite;
+}
+
+@keyframes drop_box {
+    0% {
+        box-shadow: 0 0 6px 3px #005aff36;
+    }
+
+    50% {
+        box-shadow: 0 0 6px 3px #0059ff7c;
+    }
+
+    100% {
+        box-shadow: 0 0 6px 3px #005aff36;
+    }
 }

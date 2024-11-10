@@ -4,220 +4,91 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scroll - NEW</title>
-    <link rel="stylesheet" href="../assets/css/font.css">
+    <title>Frontend Developer and Graphics Designer - Abdul Ahad</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="../assets/css/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="../assets/css/all.css">
     <link rel="stylesheet" href="../assets/css/scroll.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-<style>
-
-    #tutorsElevenPlus {
-        background: url(../assets/img/TutorsElevenPlus.jpg) center no-repeat;
-        background-size: cover;
-    }
-
-    #trolleymate {
-        background: url(../assets/img/trolleymate.jpg) center no-repeat;
-        background-size: cover;
-    }
-
-    #interstate {
-        background: url(../assets/img/interstate.jpg) center no-repeat;
-        background-size: cover;
-    }
-
-    #oneli {
-        background: url(../assets/img/oneli_builders.jpg) center no-repeat;
-        background-size: cover;
-    }
-
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-        height: 300px;
-        width: auto;
-        background-color: red;
-    }
-    
-    .servicesItem {
-        height: auto;
-        width: auto;
-        border: 1px solid #ffffff23;
-        transition: 0.3s;
-        border-radius: 15px;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .servicesItem::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: linear-gradient(90deg, #5bc0de, #3a8ed9);
-        border-radius: 15px;
-    }
-
-    .servicesItem:hover {
-        border-radius: 15px;
-        background-clip: padding-box;
-    }
-
-    /* solutions  */
-    .solutionCard {
-        height: 100%;
-        width: auto;
-        border-radius: 30px;
-        background: #0d0d0d6e;
-        border: 1px solid #1163fb36;
-        transition: 0.3s;
-        perspective: 100px;
-        transform: rotate3d(1, 1, 1, -10deg);
-    }
-
-    .solutionCard:hover {
-        transform: rotate3d(1, 1, 1, 0deg);
-        scale: 1.03;
-    }
-
-    .solutionCardIcon {
-        height: 50px;
-        width: 50px;
-        background: lightblue;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 15px;
-    }
-    .solutionsNamekPill {
-        padding: 0.5rem 1.2rem;
-        font-size: 12px;
-        border-radius: 10rem;
-        user-select: none;
-        border: 1px solid #adcaffe3;
-        color: #9ec0ffeb;
-        margin: 0.1rem 0;
-    }
-    .projectServicePill {
-        padding: 0.5rem 1.2rem;
-        font-size: 14px;
-        border-radius: 10rem;
-        user-select: none;
-        border: 1px solid #c5ffe4be;
-        color: #c5ffe4be;
-        margin: 0.1rem 0;
-    }
-    .image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        filter: blur(10px);
-        opacity: 0.5;
-    }
-
-    .heroBannerContainer {
-        position: relative;
-    }
-
-    .heroBannerContainer::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 50%;
-        width: 100%;
-        background: url(../assets/img/download.png), linear-gradient(0deg, #090909, #090909);
-    }
-
-    /* packagesCard  */
-    .packagesCard {
-        height: 100%;
-        width: auto;
-        border-radius: 30px;
-        background: linear-gradient(45deg, #0020561c, #5076ff4d);
-        border: 1px solid #1163fb36;
-    }
-
-    /* footer */
-    .footer {
-        height: 400px;
-        width: 100%;
-        background: url(../assets/img/download.png), linear-gradient(0deg, #090909, #090909);
-        position: relative;
-    }
-</style>
 <body>
-    
-    <div class="cursor"></div>
 
     <div id="content">
-
-        
 		<div class="scroller">
       
 			<section class="fullscreen position-relative">
                 <div class="container-lg wrapper position-relative z-1">
                     <div id="hero" class="flex_align_between flex-column pb-3">
-                        <nav class="navbar navbar-expand-lg z-2 w-100" id="navbar">
-                            <div class="container-lg wrapper py-3 px-lg-3 gap-lg-2" id="navbarContent">
-                                <a class="navbar-brand" href="#">
-                                    <span class="fw-semibold text-uppercase" style="color: var(--primary);">Capital Technologies</span>
+                        <nav class="navbar navbar-expand-lg py-3 z-2 w-100" id="navbar">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="index.html" aria-label="homepage">
+                                    <img src="../assets/img/abdul_ahad_logo.png" loading="eager" width="55" height="62" alt="abdul ahaf logo">
                                 </a>
-                                <ul class="navbar-nav ms-auto d-lg-flex d-none gap-lg-2">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Solutions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Packages</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Portfolio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Company</a>
-                                    </li>
-                                </ul>
-                                <div class="d-flex align-items-center gap-2">
-                                    <button class="btn_primary inline_flex gap-1 arrowIconBtn">
+                                <div class="d-lg-none d-flex align-items-center gap-2">
+                                    <a aria-label="contact page" href="contact.html" class="btn_primary inline_flex gap-1 arrowIconBtn">
                                         <span>Contact</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                    </button>
-                                    <button class="btn_dark d-lg-none inline_flex px-1 rounded-0 border-0 fs_6 fw-medium gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24">
+                                            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                                        </svg>
+                                    </a>
+                                    <button class="btn_dark inline_flex px-1 rounded-0 border-0 fs_6 fw-medium gap-1"data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="material-icons text_light">menu</span>
                                     </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mx-auto my-2 my-lg-0 gap-lg-2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html" aria-label="homepage">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="services.html" aria-label="services page">Services</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="portfolio.html" aria-label="projects portfolio page">Portfolio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="testimonial.html" aria-label="testimonials page">Testimonials</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html" aria-label="about page">About</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="d-lg-block d-none">
+                                    <a aria-label="contact page" href="contact.html" class="btn_primary inline_flex gap-1 arrowIconBtn">
+                                        <span>Contact</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24">
+                                            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </nav>
                         <div class="position-relative z-1">
                             <div class="heroTxtContainer">
                                 <div class="col-lg-11 col-12 mb-4">
-                                    <h1 class="my-1 display-5 fw-medium text_light text-center">Your New Age <br>Software Development Partner</h1>
-                                    <p class="text-center fs_5 text-white-50">We empower businesses to thrive with cutting-edge software solutions, seamlessly overcoming challenges and driving sustainable success.</p>
+                                    <h1 class="my-1 display-5 fw-medium text_light text-center"><span class="text_blue">Designing</span> impactful <br> <span class="text_blue">websites</span> for businesses online</h1>
+                                    <p class="text-center fst-italic fs_5 text-white-50">I specialize in crafting unique, user-friendly websites that deliver tailored solutions, ensuring seamless and engaging digital experiences for businesses.</p>
                                     <div class="text-center">
-                                        <button class="btn_primary inline_flex gap-1 arrowIconBtn">
-                                            <span>Get Started</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                        </button>
+                                        <a aria-label="explore my upwork profile" href="https://www.upwork.com/freelancers/abdula61?p=1797337908499525632" target="_blank" class="align-items-center upworkCard d-inline-flex p-2 px-3 rounded-4 shadow-sm shadow_hover text-decoration-none">
+                                            <img src="../assets/img/upwork_logo.png" loading="eager" height="29" width="90" alt="upwork green logo">
+                                            <div>
+                                                <p class="fs_xs text_light fw-medium m-0">Rated 5.0</p>
+                                                <div class="fs_6">
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                    <i class="bx bxs-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -227,45 +98,45 @@
                         </div>
                     </div>
                 </div>
-                <img src="../assets/img/header_bg.jpg" class="image" alt="">
-			</section>            
+                <img src="../assets/img/header_bg.jpg" loading="eager" height="500" width="1400" class="image" alt="blue and black gradient theme background">
+			</section>  
+            
+            <section class="bg_texture pt-5">
+                <div class="container-lg wrapper">
+                    <div class="w-100">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredCard p-3 py-4 pb-5">
+                                    <img src="../assets/img/responsive_deisgn.webp" loading="lazy" class="mb-2" height="60" width="60" alt="responses design 3d icon">
+                                    <p class="fs-5 fw-medium text_light my-1">Responsive Layouts</p>
+                                    <p class="text_lighter fw-light fs_6 my-1">Designing responsive layouts that ensure a smooth, adaptive experience on all devices.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredCard p-3 py-4 pb-5">
+                                    <img src="../assets/img/clean_code.webp" loading="lazy" class="mb-2" height="60" width="60" alt="clean and concise code 3d icon">
+                                    <p class="fs-5 fw-medium text_light my-1">Clean & Concise Code</p>
+                                    <p class="text_lighter fw-light fs_6 my-1">Writing clean, concise, and efficient code to power your project.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredCard p-3 py-4 pb-5">
+                                    <img src="../assets/img/user_friendly.webp" loading="lazy" class="mb-2" height="60" width="60" alt="user-friendly 3d icon">
+                                    <p class="fs-5 fw-medium text_light my-1">User-friendly Designs</p>
+                                    <p class="text_lighter fw-light fs_6 my-1">Creating intuitive, user-friendly designs that ensure a delightful experience for everyone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <section class="fullscreen py-5">
                 <div class="flex_align_center h-100 container-lg wrapper">
-                    <div>
-                        <h2 class="my-1 fw-semibold text_light">Innovative IT services for digital success</h2>
-                        <p class="fs_5 my-1 text-white-50">We provide modern software services tailored to drive your digital success and empower your businesses with advanced technology and seamless solutions for the future.</p>
+                    <div class="w-100">
+                        <h2 class="my-1 fs-1 fw-medium text_light">Digital Services I Offer</h2>
+                        <p class="fw-light my-1 text-white-50">I offer a range of services, from design to development and deployment. Explore how I can help you grow with my web development and other services:</p>
                         <div class="row justify-content-center my-4">
-                            <div class="col-12 my-3">
-                                <div class="serviceCard serviceApp">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-7 col-md-6 col-12">
-                                            <div class="servcieDetails mt-4">
-                                                <div class="my-2">
-                                                    <p class="fs-3 fw-medium my-1">Mobile App Development</p>
-                                                    <p class="fs_5 my-1">Create top-notch and high-quality mobile applications with intuitive design and flawless performance for both Android and iOS users.</p>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                                    <div class="serviceStackPill">Swift</div>
-                                                    <div class="serviceStackPill">React Native</div>
-                                                    <div class="serviceStackPill">Flutter</div>
-                                                    <div class="serviceStackPill">Firebase</div>
-                                                    <div class="serviceStackPill">Java</div>
-                                                </div>
-                                                <div class="my-3">
-                                                    <button class="btn_explore rounded-pill arrowIconBtn my-1 fs_6 d-inline-flex align-items-center">
-                                                        <span>Learn more</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5 col-md-6 col-12 text-center">
-                                            <img src="../assets/img/app_development_mockup_2.png" width="450" style="filter: drop-shadow(-10px 10px 10px #0000005e)" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-12 my-3">
                                 <div class="serviceCard serviceWeb">
                                     <div class="row align-items-center">
@@ -273,27 +144,55 @@
                                             <div class="servcieDetails mt-4">
                                                 <div class="my-2">
                                                     <p class="fs-3 fw-medium my-1">Website Development</p>
-                                                    <p class="fs_5 my-1">Deliver efficient, feature-rich web apps that provide engaging user experiences and streamlined functionality across all devices.</p>
+                                                    <p class="my-1">I develop responsive, visually appealing websites that deliver a seamless experience across all devices, with a focus on clean, efficient code.</p>
                                                 </div>
                                                 <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                                    <div class="serviceStackPill">HTML5</div>
-                                                    <div class="serviceStackPill">CSS3</div>
-                                                    <div class="serviceStackPill">Javascript</div>
-                                                    <div class="serviceStackPill">Bootstrap & jQuery</div>
+                                                    <div class="serviceStackPill">HTML</div>
+                                                    <div class="serviceStackPill">CSS</div>
+                                                    <div class="serviceStackPill">JavaScript</div>
                                                     <div class="serviceStackPill">React.js</div>
-                                                    <div class="serviceStackPill">Node.js</div>
-                                                    <div class="serviceStackPill">Laravel</div>
+                                                    <div class="serviceStackPill">Bootstrap</div>
+                                                    <div class="serviceStackPill">jQuery</div>
                                                 </div>
                                                 <div class="my-3">
-                                                    <button class="btn_explore rounded-pill arrowIconBtn my-1 fs_6 d-inline-flex align-items-center">
+                                                    <a aria-label="learn more about web development services" href="services.html" class="btn_explore rounded-pill arrowIconBtn my-1 d-inline-flex align-items-center">
                                                         <span>Learn more</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-md-6 col-12 text-center">
-                                            <img src="../assets/img/web_development_mockup.png" width="450" class="img-fluid" style="filter: drop-shadow(6px 10px 10px #0000005e);" alt="">
+                                            <img src="../assets/img/website_development.png" width="450" height="450" loading="lazy" class="img-fluid" alt="3d mockup of resposnive web designing and development on VS code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 my-3">
+                                <div class="serviceCard serviceApp">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-7 col-md-6 col-12">
+                                            <div class="servcieDetails mt-4">
+                                                <div class="my-2">
+                                                    <p class="fs-3 fw-medium my-1">Website Speed Optimization</p>
+                                                    <p class="my-1">I help optimize your website’s speed, improving load times and boosting your site's overall efficiency.</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2 flex-wrap my-3">
+                                                    <div class="serviceStackPill">Google Lighthouse</div>
+                                                    <div class="serviceStackPill">GTmetrix</div>
+                                                    <div class="serviceStackPill">PageSpeed Insights</div>
+                                                    <div class="serviceStackPill">WebPageTest</div>
+                                                </div>
+                                                <div class="my-3">
+                                                    <a aria-label="learn more about website speed optimization services" href="services.html" class="btn_explore rounded-pill arrowIconBtn my-1 d-inline-flex align-items-center">
+                                                        <span>Learn more</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-6 col-12 text-center">
+                                            <img src="../assets/img/website_performance.png" width="450" height="450" loading="lazy" class="img-fluid" alt="3d mockup of website speed optimization and analsis on pagespeed Insights">
                                         </div>
                                     </div>
                                 </div>
@@ -304,56 +203,25 @@
                                         <div class="col-lg-7 col-md-6 col-12">
                                             <div class="servcieDetails mt-4">
                                                 <div class="my-2">
-                                                    <p class="fs-3 fw-medium my-1">Digital Marketing</p>
-                                                    <p class="fs_5 my-1">Deliver efficient, feature-rich web apps that provide engaging user experiences and streamlined functionality across all devices.</p>
+                                                    <p class="fs-3 fw-medium my-1">Web Graphics Creation</p>
+                                                    <p class="my-1">Design high-quality web graphics and banners that enhance visual appeal, reinforce brand identity, and are optimized for fast, smooth web display.</p>
                                                 </div>
                                                 <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                                    <div class="serviceStackPill">Google Analytics</div>
-                                                    <div class="serviceStackPill">SEMrush</div>
-                                                    <div class="serviceStackPill">Hootsuite</div>
-                                                    <div class="serviceStackPill">Mailchimp</div>
-                                                    <div class="serviceStackPill">Google Ads</div>
-                                                </div>
-                                                <div class="my-3">
-                                                    <button class="btn_explore rounded-pill arrowIconBtn my-1 fs_6 d-inline-flex align-items-center">
-                                                        <span>Learn more</span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5 col-md-6 col-12 text-center">
-                                            <img src="../assets/img/dm_mockup.png" width="450" class="img-fluid" style="filter: drop-shadow(6px 10px 10px #0000005e);" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 my-3">
-                                <div class="serviceCard serviceDesigning">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-7 col-md-6 col-12">
-                                            <div class="servcieDetails mt-4">
-                                                <div class="my-2">
-                                                    <p class="fs-3 fw-medium my-1">Graphics Designing</p>
-                                                    <p class="fs_5 my-1">Deliver efficient, feature-rich web apps that provide engaging user experiences and streamlined functionality across all devices.</p>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                                    <div class="serviceStackPill">Figma</div>
-                                                    <div class="serviceStackPill">Photoshop</div>
-                                                    <div class="serviceStackPill">Illustrator</div>
                                                     <div class="serviceStackPill">Canva</div>
-                                                    <div class="serviceStackPill">Sketch</div>
+                                                    <div class="serviceStackPill">Freepik</div>
+                                                    <div class="serviceStackPill">Adobe Photoshop</div>
+                                                    <div class="serviceStackPill">Photoroom</div>
                                                 </div>
                                                 <div class="my-3">
-                                                    <button class="btn_explore rounded-pill arrowIconBtn my-1 fs_6 d-inline-flex align-items-center">
+                                                    <a aria-label="learn more about web graphics creation services" href="services.html" class="btn_explore rounded-pill arrowIconBtn my-1 d-inline-flex align-items-center">
                                                         <span>Learn more</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-md-6 col-12 text-center">
-                                            <img src="../assets/img/graphics_design_mockup.png" width="450" class="img-fluid" style="filter: drop-shadow(6px 10px 10px #0000005e);" alt="">
+                                            <img src="../assets/img/web_graphics_creation.png" width="450" height="450" loading="lazy" class="img-fluid" alt="3d mockup of web graphics creation on adobe photoshop">
                                         </div>
                                     </div>
                                 </div>
@@ -361,29 +229,82 @@
                         </div>
                     </div>
                 </div>
-        
 			</section>
 
-            <!-- solutions  -->
             <section class="fullscreen position-relative py-5">
-                <img src="../assets/img/solutions_bg.jpg" class="image" alt="">
+                <img src="../assets/img/solutions_bg.jpg" loading="lazy" height="500" width="1400" class="image" alt="blue and black gradient theme background">
 				<div class="flex_align_center h-100 container-lg wrapper z-1 position-relative">
-                    <div>
-                        <h2 class="text-start my-1 fw-semibold text_light">Exclusive and innovative digital solutions</h2>
-                        <p class="text-start fs_5 my-1 text-white-50">Our exclusive and innovative digital solutions are thoughtfully crafted to transform your business, ensuring lasting success and growth.</p>
+                    <div class="w-100">
+                        <h2 class="text-center fs-1 my-1 fw-medium text_light"><span class="text_blue">Featured</span> Web Projects</h2>
+                        <p class="text-center my-1 text-white-50">Explore my featured web projects, showcasing full UI designs and landing pages crafted for a seamless user experience.</p>
+                        <div class="row my-4">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredProjectCard">
+                                    <div class="featuredProjectBanner">
+                                        <img src="../assets/img/interstateX_webpage.png" width="374" height="1393" loading="lazy" alt="UI design of interstatex.com logistics company">
+                                    </div>
+                                    <a aria-label="explore interstatex usa project" href="https://interstatex.com/" target="_blank" class="featuredProjectDetails text-decoration-none p-3 d-block">
+                                        <p class="text_light fs_5 mt-1 mb-0 fw-medium">InterStateX USA</p>
+                                        <p class="text-white-50 fs_6 mt-0 mb-2">Develop logistics web application.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredProjectCard">
+                                    <div class="featuredProjectBanner">
+                                        <img src="../assets/img/netflix_uidesign.webp" width="374" height="1351" loading="lazy" alt="UI design of netflix pakistan clone entertainment company">
+                                    </div>
+                                    <a aria-label="explore netflix pakistan clone project" href="https://abdullahad123.github.io/abdulahad-portfolio/web-projects/netflix/html/index.html" target="_blank" class="featuredProjectDetails text-decoration-none p-3 d-block">
+                                        <p class="text_light fs_5 mt-1 mb-0 fw-medium">Netfilx Pakistan</p>
+                                        <p class="text-white-50 fs_6 mt-0 mb-2">Develop landing page clone.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                                <div class="featuredProjectCard">
+                                    <div class="featuredProjectBanner">
+                                        <img src="../assets/img/oneli_builders_webpage.png" width="374" height="1778" loading="lazy" alt="UI design of onelubuilders.co.uk constrcution company">
+                                    </div>
+                                    <a aria-label="explore oneli builders uk project" href="https://oneli.capitaltechnologies.co.uk/" target="_blank" class="featuredProjectDetails text-decoration-none p-3 d-block">
+                                        <p class="text_light fs_5 mt-1 mb-0 fw-medium">Oneli Builders UK</p>
+                                        <p class="text-white-50 fs_6 mt-0 mb-2">Develop builders web application.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center my-3">
+                            <a aria-label="explore my projects portfolio for more" href="portfolio.html" class="btn_primary inline_flex gap-1 arrowIconBtn">
+                                <span>Explore More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+			</section>
+
+            <section class="bg_texture py-5">
+                <div class="container-lg wrapper">
+                    <div class="w-100">
+                        <h2 class="my-1 fs-1 fw-medium text_light">Enhanced Abilities & Services</h2>
+                        <p class="my-1 text-white-50">With my enhanced skills, I can help you elevate your projects and strengthen your digital presence for greater impact and success.</p>
                         <div class="row my-4">
                             <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
                                 <div class="solutionCard p-md-4 p-3">
                                     <div class="solutionCardIcon mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" width="32" height="32" viewBox="0 0 682.66669 682.66669"><defs id="defs3658"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3668"><path d="M 0,512 H 512 V 0 H 0 Z" id="path3666"/></clipPath></defs><g id="g3660" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g id="g3662"><g id="g3664" clip-path="url(#clipPath3668)"><g id="g3670" transform="translate(291.0713,18.9902)"><path d="m 0,0 h -223.305 v 371.968 c 0,10.428 6.659,19.69 16.543,23.012 L 0,464.48 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3672"/></g><g id="g3674" transform="translate(416.75,65.6499)"><path d="M 0,0 V -46.66 H -125.68 V 205.35 H 12.99 c 9.19,0 16.63,-7.44 16.63,-16.63 V 55.32" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3676"/></g><g id="g3678" transform="translate(291.0713,18.9902)"><path d="m 0,0 h 202.152 c 6.228,0 11.277,5.048 11.277,11.276 V 46.658 H 0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3680"/></g><g id="g3682" transform="translate(458.5078,122.7744)"><path d="m 0,0 h 4.234 c 23.062,0 41.758,-18.696 41.758,-41.758 v -15.368 h -87.75 v 15.368 C -41.758,-18.696 -23.062,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3684"/></g><g id="g3686" transform="translate(18.7764,18.9902)"><path d="M 0,0 H 48.99 V 46.658 H -11.276 V 11.276 C -11.276,5.048 -6.228,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3688"/></g><g id="g3690" transform="translate(61.8696,122.7744)"><path d="M 0,0 H 5.897 V -57.126 H -54.37 v 2.756 C -54.37,-24.342 -30.027,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3692"/></g><g id="g3694" transform="translate(368.7231,271.0049)"><path d="M 0,0 H -77.652 V 212.466 L -7.404,144.563 C -2.672,139.989 0,133.689 0,127.107 V 35.354" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3696"/></g><g id="g3698" transform="translate(122.3901,426.77)"><path d="m 0,0 v 50.65 c 0,8.61 6.98,15.59 15.6,15.59 h 1.58 c 8.61,0 15.59,-6.98 15.59,-15.59 V 11.02" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3700"/></g><g id="g3702" transform="translate(291.0698,426.7798)"><path d="M 0,0 -168.68,-56.7" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3704"/></g><g id="g3706" transform="translate(291.0698,372.7998)"><path d="M 0,0 -168.68,-56.7" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3708"/></g><g id="g3710" transform="translate(291.0698,318.8198)"><path d="M 0,0 -168.68,-56.7" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3712"/></g><g id="g3714" transform="translate(291.0698,264.8398)"><path d="M 0,0 -168.68,-56.7" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3716"/></g><g id="g3718" transform="translate(150.2363,163.5205)"><path d="M 0,0 -27.846,-9.36" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3720"/></g><g id="g3722" transform="translate(291.0698,210.8599)"><path d="M 0,0 -107.247,-36.05" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3724"/></g><g id="g3726" transform="translate(211.2773,18.9902)"><path d="m 0,0 h -88.886 v 63.715 c 0,4.94 3.29,9.275 8.048,10.603 l 69.807,19.488 C -5.489,95.354 0,91.187 0,85.433 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3728"/></g><g id="g3730" transform="translate(404.9683,209.1401)"><path d="m 0,0 h -73.551 c -2.843,0 -5.148,2.305 -5.148,5.148 v 18.053 c 0,2.844 2.305,5.149 5.148,5.149 H 0 c 2.844,0 5.149,-2.305 5.149,-5.149 V 5.148 C 5.149,2.305 2.844,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3732"/></g><g id="g3734" transform="translate(404.9683,152.1099)"><path d="m 0,0 h -73.551 c -2.843,0 -5.148,2.305 -5.148,5.149 v 18.053 c 0,2.843 2.305,5.148 5.148,5.148 H 0 c 2.844,0 5.149,-2.305 5.149,-5.148 V 5.149 C 5.149,2.305 2.844,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3736"/></g><g id="g3738" transform="translate(355.7451,94.4971)"><path d="m 0,0 h -24.328 c -2.843,0 -5.148,2.305 -5.148,5.148 v 18.053 c 0,2.844 2.305,5.149 5.148,5.149 H 0 c 2.844,0 5.149,-2.305 5.149,-5.149 V 5.148 C 5.149,2.305 2.844,0 0,0 Z" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3740"/></g><g id="g3742" transform="translate(166.8345,103.4688)"><path d="M 0,0 V -84.479" style="fill:none;stroke:#2a4d59;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3744"/></g></g></g></g></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="32" viewBox="0 0 60 60" width="32"><clipPath id="clip0_203_10527"><path d="m0 0h60v60h-60z"/></clipPath><g clip-path="url(#clip0_203_10527)" fill="rgb(0,0,0)"><path d="m14 44c-.803 0-1.557-.313-2.122-.88l-10.999-10.999c-.566-.564-.879-1.318-.879-2.121s.313-1.557.88-2.122l10.999-10.999c.564-.566 1.318-.879 2.121-.879 1.654 0 3 1.346 3 3 0 .803-.313 1.557-.88 2.122l-8.878 8.878 8.879 8.879c.567.564.879 1.318.879 2.121 0 1.654-1.346 3-3 3z"/><path d="m46 45c-1.654 0-3-1.346-3-3 0-.803.313-1.557.88-2.122l8.878-8.878-8.879-8.879c-.566-.566-.879-1.32-.879-2.121 0-1.654 1.346-3 3-3 .803 0 1.557.313 2.122.88l10.999 10.999c.567.566.879 1.32.879 2.121 0 .803-.313 1.557-.88 2.122l-10.999 10.999c-.564.567-1.318.879-2.121.879z"/><path d="m21 53c-1.654 0-3-1.346-3-3 0-.398.078-.787.23-1.155l18.001-40.002c.47-1.12 1.557-1.843 2.769-1.843 1.654 0 3 1.346 3 3 0 .398-.078.787-.23 1.155l-18.001 40.002c-.47 1.12-1.557 1.843-2.769 1.843z"/></g></svg>
                                     </div>
                                     <div class="solutionDetails">
-                                        <p class="fs-5 fw-medium text_light my-1">Entreprises Solutions</p>
-                                        <p class="fs_6 text-white-50 my-1">Streamline and optimize your operations with our enterprise solutions, designed for efficiency and scalability.</p>
+                                        <p class="fs-5 fw-medium text_light my-1">HTML Conversion</p>
+                                        <p class="fs_6 text-white-50 my-1">Convert your design files into responsive, clean HTML code for a fast, functional website.</p>
                                         <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                            <div class="solutionsNamekPill">ERP Integration</div>
-                                            <div class="solutionsNamekPill">Data Management Systems</div>
-                                            <div class="solutionsNamekPill">Supply Chain Optimization</div>
+                                            <div class="solutionsNamekPill">PSD to HTML</div>
+                                            <div class="solutionsNamekPill">Figma to HTML</div>
+                                            <div class="solutionsNamekPill">Adobe XD to HTML</div>
+                                            <div class="solutionsNamekPill">PDF to HTML</div>
+                                            <div class="solutionsNamekPill">JPG to HTML</div>
+                                            <div class="solutionsNamekPill">Wordpress to HTML</div>
                                         </div>
                                     </div>
                                 </div>
@@ -391,15 +312,16 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
                                 <div class="solutionCard p-md-4 p-3">
                                     <div class="solutionCardIcon mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" height="32" viewBox="0 0 512 512" width="32" fill="#2a4d59"><path d="m497.42 246.229-49.149-8.866v-5.817l9.287 1.828c.514.101 1.03.15 1.545.15 1.837 0 3.638-.634 5.082-1.821 1.848-1.52 2.918-3.786 2.918-6.179v-40.839c0-3.735-2.584-6.973-6.226-7.801l-217.077-49.363c-3.279-62.146-54.868-111.698-117.816-111.698-65.056 0-117.984 52.928-117.984 117.984 0 47.825 28.604 89.094 69.601 107.602l-66.096 44.893c-2.193 1.488-3.505 3.967-3.505 6.617v149.271c0 3.492 2.265 6.58 5.595 7.63l145.887 45.987c.778.245 1.589.37 2.405.37h334.113c4.418 0 8-3.582 8-8v-234.075c0-3.87-2.771-7.186-6.58-7.873zm-65.149-11.751-12.026-2.169v-6.277l12.026 2.367zm-201.862-45.807 3.811.75v9.332l-8.753-1.579c1.763-2.758 3.409-5.596 4.942-8.503zm19.811 3.899 19.262 3.791v8.753l-19.262-3.474zm35.262 6.94 118.762 23.373v6.54l-118.762-21.423zm165.62 16.287-214.07-42.13c3.398-9.437 5.622-19.428 6.503-29.798l207.567 47.202zm-427.102-81.99c0-56.234 45.75-101.984 101.984-101.984s101.984 45.75 101.984 101.984-45.75 101.984-101.984 101.984-101.984-45.749-101.984-101.984zm0 163.349 72.345-49.137c9.474 2.46 19.407 3.772 29.64 3.772 9.611 0 18.953-1.164 27.903-3.342v228.818l-30.331-9.561v-116.077c2.433-1.397 4.02-4.009 4.02-6.932v-23.41c0-2.503-1.172-4.862-3.167-6.375s-4.584-2.004-6.993-1.328l-71.27 19.984c-3.454.968-5.84 4.116-5.84 7.703v19.445c0 1.985.747 3.874 2.051 5.33v76.064l-18.358-5.787zm87.577 41.139-55.27 12.423v-3.382l55.27-15.498zm-53.219 28.361 11.4-2.562v86.654l-11.4-3.594zm27.4-6.158 21.798-4.9v107.065l-21.798-6.871zm330.414.793v118.886h-60.175v-124.78zm6.315-15.458-159.608-15.634v-9.365l159.608 17.244zm-82.49 7.997v126.347h-69.149v-133.12zm148.003 126.347h-55.828v-117.709c1.36-.294 2.637-.933 3.689-1.887 1.672-1.517 2.626-3.669 2.626-5.926v-23.759c0-4.085-3.079-7.515-7.141-7.954l-175.608-18.972c-2.256-.249-4.514.483-6.204 2-1.69 1.518-2.656 3.682-2.656 5.953v25.53c0 4.116 3.124 7.561 7.22 7.962l.749.073v134.687h-84.961v-236.86c17.354-6.982 32.677-17.974 44.819-31.823l273.295 49.296zm-227.128-317.117c.917-4.321 5.159-7.081 9.486-6.166l50.852 10.786c4.322.917 7.083 5.164 6.166 9.486-.798 3.762-4.12 6.341-7.818 6.341-.55 0-1.108-.057-1.668-.176l-50.852-10.786c-4.322-.916-7.083-5.163-6.166-9.485zm106.669 22.625c.917-4.321 5.162-7.084 9.485-6.166l44.089 9.352c4.322.917 7.083 5.164 6.166 9.486-.798 3.762-4.12 6.341-7.818 6.341-.55 0-1.108-.057-1.668-.176l-44.089-9.352c-4.322-.915-7.082-5.162-6.165-9.485zm-179.125 3.719c0-4.418-3.582-8-8-8h-82.826c-1.173 0-2.164-.991-2.164-2.164s.991-2.164 2.164-2.164h80.876c3.746 0 6.99-2.599 7.807-6.254l11.705-52.345c1.186-5.304.055-10.452-3.185-14.497-3.309-4.131-8.755-6.8-13.875-6.8h-91.206l-4.632-20.715c-.817-3.655-4.062-6.254-7.807-6.254h-15.744c-4.418 0-8 3.582-8 8s3.582 8 8 8h9.334l4.631 20.71c0 .002.001.004.001.006l12.7 56.797c-5.246 3.188-8.77 8.941-8.77 15.516 0 10.016 8.148 18.164 18.164 18.164h82.826c4.419 0 8.001-3.581 8.001-8zm-7.56-76.225c.329.031 1.14.375 1.479.843.056.077.187.258.029.963l-10.306 46.091h-68.059l-10.326-46.181c0-.001 0-.003-.001-.004l-.383-1.711z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 512.042 512.042" height="32" viewBox="0 0 512.042 512.042" width="32"><g><path d="m490.091 11.951c-14.819-14.821-38.238-16-54.472-2.739l-143.272 117.033h-242.297c-22.083 0-40.049 17.961-40.049 40.038v241.384c0 22.077 17.966 40.038 40.049 40.038h113.82v34.336h-25.228c-8.284 0-15 6.716-15 15s6.716 15 15 15h160.513c8.284 0 15-6.716 15-15s-6.716-15-15-15h-25.228v-34.336h113.82c22.084 0 40.05-17.961 40.05-40.038v-261.55l65.046-79.711c13.246-16.231 12.063-39.642-2.752-54.455zm-207.408 174.331c.461-9.039 4.58-17.165 11.616-22.895l24.957-20.387 39.847 39.847-20.434 25.041c-5.722 6.995-13.844 11.096-22.869 11.546-9.035.456-17.518-2.82-23.908-9.21-6.4-6.4-9.671-14.903-9.209-23.942zm-12.045 96.782c-6.647 6.647-17.718 9.707-32.902 9.098-11.508-.463-21.364.346-29.715 1.851 1.504-8.35 2.313-18.212 1.851-29.715-.61-15.185 2.451-26.254 9.098-32.901 6.9-6.9 16.075-10.701 25.834-10.701s18.933 3.8 25.833 10.701c14.245 14.245 14.245 37.422.001 51.667zm-26.711 198.978h-50.057v-34.336h50.057zm153.87-74.375c0 5.535-4.508 10.038-10.05 10.038h-337.697c-5.541 0-10.049-4.503-10.049-10.038v-12.798h357.796zm0-42.798h-357.796v-198.586c0-5.535 4.508-10.038 10.049-10.038h211.378c-5.133 8.569-8.187 18.344-8.706 28.508-.11 2.15-.104 4.295.011 6.426-2.613-.308-5.257-.484-7.928-.484-17.772 0-34.481 6.921-47.047 19.488-12.812 12.811-18.82 31.423-17.86 55.319 1.278 31.806-9.267 44.573-10.089 45.517-5.613 5.875-5.532 15.188.243 20.964 2.929 2.929 6.768 4.394 10.607 4.394 3.73 0 7.461-1.383 10.356-4.149.939-.818 13.709-11.366 45.518-10.09 23.903.962 42.508-5.048 55.32-17.86 14.969-14.97 21.281-35.355 18.975-54.907 1.134.063 2.271.103 3.412.103 1.017 0 2.037-.025 3.057-.076 17.345-.866 33.599-9.072 44.606-22.528l35.896-43.988v181.987zm-206.533-32.885s-.074.083-.232.228c.078-.075.155-.151.232-.228zm-21.213-21.214c-.077.077-.152.154-.227.231.145-.157.227-.231.227-.231zm299.548-263.33-91.433 112.046-35.56-35.559 111.991-91.481c1.979-1.617 4.366-2.415 6.745-2.415 2.734 0 5.457 1.055 7.535 3.133 3.885 3.884 4.195 10.021.722 14.276z"/></g></svg>
                                     </div>
                                     <div class="solutionDetails">
-                                        <p class="fs-5 fw-medium text_light my-1">Small Business Solutions</p>
-                                        <p class="fs_6 text-white-50 my-1">Small business solutions are your trusty sidekick, empowering growth and simplifying everyday tasks.</p>
+                                        <p class="fs-5 fw-medium text_light my-1">Website Redesign</p>
+                                        <p class="fs_6 text-white-50 my-1">Transform your outdated website with a modern, user-friendly design to enhance performance and usability.</p>
                                         <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                            <div class="solutionsNamekPill">Custom CRM Solutions</div>
-                                            <div class="solutionsNamekPill">E-commerce Platforms</div>
-                                            <div class="solutionsNamekPill">Accounting and Invoicing Tools</div>
+                                            <div class="solutionsNamekPill">Website Redesign</div>
+                                            <div class="solutionsNamekPill">Speed Enhancement</div>
+                                            <div class="solutionsNamekPill">Site Optimization</div>
+                                            <div class="solutionsNamekPill">Mobile Optimization</div>
                                         </div>
                                     </div>
                                 </div>
@@ -407,15 +329,19 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 col-12 my-3">
                                 <div class="solutionCard p-md-4 p-3">
                                     <div class="solutionCardIcon mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#2a4d59" enable-background="new 0 0 64 64" viewBox="0 0 64 64" height="32" width="32"><g><path d="m61.305 25.292-6.043-5.04c-.947-.79-2.076-1.276-3.179-1.369-1.282-.103-2.433.332-3.162 1.205l-4.703 5.639-17.945 21.519.012.01c-.227.272-.367.613-.359.982l.237 11.671c.009.445.215.863.563 1.141.268.215.599.329.937.329.1 0 .2-.01.299-.03l11.227-2.283c.34-.069.628-.261.842-.518l.011.009 17.86-21.416 4.703-5.639c1.413-1.697.841-4.424-1.3-6.21zm-32.18 32.757-.135-6.622 6.505 5.326zm9.563-2.557-9.143-7.487 16.016-19.204 9.075 7.568zm21.612-25.913-3.742 4.486-9.075-7.568 3.742-4.487c.09-.108.326-.16.606-.137.487.041 1.037.29 1.508.683l6.043 5.04c.941.784 1.13 1.73.918 1.983z"/><path d="m20.971 49.408c-.076-.049-.155-.087-.235-.121-.009-.004-.017-.01-.026-.013-.174-.07-.356-.102-.537-.104-.01 0-.019-.002-.028-.002-.184.001-.366.038-.537.104-.009.003-.017.005-.026.008-.179.074-.345.182-.487.323-.001.001-.002.001-.003.002l-.003.003c-.002.002-.005.005-.007.007l-3.797 3.796c-.838.833-2.195.833-3.026.004l-1.05-1.05c-.83-.83-.828-2.188 0-3.021l3.802-3.802c.001-.001.002-.002.004-.004l.005-.005c.001-.001.002-.003.003-.005.14-.141.248-.306.322-.484.004-.009.005-.019.009-.028.066-.171.103-.352.104-.535 0-.009-.002-.018-.002-.028-.002-.182-.035-.364-.105-.538-.003-.007-.008-.013-.011-.02-.034-.082-.073-.162-.123-.239-1.249-1.922-2.125-4.034-2.604-6.277-.005-.023-.015-.043-.021-.066-.019-.073-.04-.147-.069-.215-.015-.035-.037-.066-.054-.1-.028-.053-.054-.106-.087-.155-.022-.032-.049-.059-.073-.088-.037-.046-.073-.093-.115-.134-.022-.022-.048-.039-.071-.059-.05-.043-.1-.087-.155-.123-.02-.013-.042-.022-.063-.034-.062-.037-.125-.073-.193-.1-.025-.01-.051-.015-.076-.024-.066-.023-.131-.046-.2-.059-.048-.009-.097-.01-.146-.015-.047-.005-.093-.014-.142-.014h-5.385c-1.182 0-2.143-.961-2.143-2.142v-1.47c0-1.181.961-2.142 2.143-2.142h5.382.005c.003 0 .006-.002.009-.002.156-.001.304-.032.445-.077.024-.008.048-.013.072-.022.137-.052.263-.123.378-.21.022-.016.041-.033.062-.051.112-.096.213-.204.293-.328.01-.016.017-.033.026-.049.08-.135.143-.282.178-.44.001-.003.002-.005.003-.008.479-2.242 1.355-4.354 2.604-6.278.05-.077.089-.157.123-.239.003-.007.007-.013.01-.02.07-.175.103-.357.105-.539 0-.009.002-.018.002-.027-.001-.184-.038-.365-.104-.536-.003-.009-.005-.018-.009-.027-.074-.179-.182-.345-.323-.487-.001-.001-.001-.002-.002-.003l-.003-.003c-.003-.003-.006-.006-.009-.009l-3.795-3.795c-.832-.838-.834-2.196-.004-3.026l1.05-1.05c.831-.83 2.188-.828 3.022 0l3.811 3.811c.006.006.015.008.021.014.128.124.274.217.432.287.036.016.071.028.107.041.161.057.327.096.498.097h.003.001c.169 0 .338-.039.502-.098.049-.017.093-.042.14-.064.058-.028.119-.044.174-.08 1.922-1.249 4.034-2.125 6.276-2.604.018-.004.034-.012.052-.017.079-.02.156-.042.229-.073.038-.016.071-.039.106-.058.05-.027.101-.051.148-.083.04-.028.075-.061.112-.093.036-.031.075-.059.108-.093.034-.034.061-.073.091-.111.031-.038.064-.073.09-.114.026-.039.044-.081.066-.123.023-.044.05-.086.069-.132.02-.05.033-.102.048-.154.012-.041.028-.081.037-.124.014-.071.018-.145.022-.218.001-.025.008-.049.008-.075v-.008c0-.002 0-.003 0-.005v-5.371c0-1.181.961-2.142 2.143-2.142h1.469c1.182 0 2.143.961 2.143 2.142v5.374.001.01c0 .033.008.063.01.096.004.066.007.132.02.196.01.049.027.094.042.141.014.046.024.093.042.137.02.05.048.095.074.142.021.038.038.078.062.114.028.042.061.079.093.117.029.036.056.074.089.108s.071.062.108.092c.038.032.073.066.114.094.044.03.093.053.14.079.038.021.074.045.114.062.067.029.139.049.211.068.024.006.045.017.069.022 2.241.479 4.354 1.355 6.278 2.604.054.035.115.051.171.079.048.023.093.048.142.065.164.059.332.098.502.098.172 0 .34-.04.501-.097.036-.013.071-.025.107-.041.158-.07.304-.163.432-.287.006-.006.015-.008.022-.014l3.806-3.807c.838-.83 2.196-.834 3.026-.004l1.05 1.05c.572.572.739 1.392.523 2.121.116.003.23-.001.347.008.868.073 1.733.316 2.559.687.448-1.711.026-3.604-1.308-4.937l-1.05-1.05c-1.996-1.996-5.253-1.998-7.265 0l-2.991 2.992c-1.589-.909-3.274-1.609-5.039-2.09v-4.23c0-2.835-2.307-5.142-5.143-5.142h-1.469c-2.835 0-5.143 2.307-5.143 5.142v4.229c-1.765.482-3.451 1.181-5.039 2.09l-2.996-2.996c-2.007-1.994-5.266-1.992-7.26.004l-1.05 1.05c-1.996 1.995-1.997 5.252 0 7.265l2.991 2.991c-.909 1.589-1.608 3.274-2.09 5.039h-4.228c-2.835 0-5.143 2.307-5.143 5.142v1.47c0 2.835 2.307 5.142 5.143 5.142h4.228c.482 1.766 1.181 3.451 2.09 5.039l-2.995 2.996c-1.994 2.007-1.992 5.264.004 7.26l1.05 1.05c.998.998 2.312 1.497 3.627 1.497s2.632-.498 3.637-1.497l2.992-2.991c1.009.578 2.062 1.06 3.145 1.467l-.066-3.255c-.862-.389-1.702-.829-2.504-1.349z"/><path d="m20.391 33.314c0-6.022 4.899-10.921 10.921-10.921 3.582 0 6.758 1.742 8.751 4.414l1.97-2.362c-2.556-3.084-6.412-5.052-10.721-5.052-7.676 0-13.921 6.245-13.921 13.921 0 5.207 2.878 9.749 7.123 12.137l1.966-2.357c-3.602-1.788-6.089-5.494-6.089-9.78z"/></g></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="32" height="32">
+                                            <g id="Startup" style="stroke: #000"><path style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="&#10;&#9;&#9;M160.246,371.758c10.976,10.977,27.214,14.681,41.792,9.348c62.703-22.937,148.367-49.807,202.764-104.204&#10;&#9;&#9;C514.15,167.556,489.655,22.345,489.655,22.345S344.444-2.15,235.097,107.198C180.7,161.594,153.83,247.259,130.893,309.961&#10;&#9;&#9;c-5.333,14.578-1.628,30.816,9.348,41.792L160.246,371.758z"/><path style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="&#10;&#9;&#9;M187.333,173.026c-31.43-26.265-78.28-24.637-107.8,4.882l-49.877,49.877c42.838-8.158,86.911,4.981,118.271,35.124"/><path style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="&#10;&#9;&#9;M249.091,364.072c30.143,31.36,43.282,75.433,35.124,118.271l49.877-49.877c29.52-29.52,31.147-76.369,4.882-107.8"/><path style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="&#10;&#9;&#9;M104.855,407.147c15.621,15.621,15.621,40.948,0,56.569S20,492,20,492s12.665-69.232,28.286-84.853S89.234,391.526,104.855,407.147&#10;&#9;&#9;z"/><line style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="471.339" y1="173.734" x2="338.266" y2="40.661"/><circle style="fill:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" cx="305.807" cy="206.193" r="40"/></g>
+                                        </svg>
                                     </div>
                                     <div class="solutionDetails">
-                                        <p class="fs-5 fw-medium text_light my-1">Custom Solutions</p>
-                                        <p class="fs_6 text-white-50 my-1">Custom solutions are the tailor-made suits of the business world, designed to fit your unique needs perfectly.</p>
+                                        <p class="fs-5 fw-medium text_light my-1">SEO Optimization</p>
+                                        <p class="fs_6 text-white-50 my-1">Improve your website’s search engine ranking with tailored SEO strategies for better visibility and traffic.</p>
                                         <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                            <div class="solutionsNamekPill">Bespoke Web Applications</div>
-                                            <div class="solutionsNamekPill">Custom API Development</div>
-                                            <div class="solutionsNamekPill">Unique Software Integrations</div>
+                                            <div class="solutionsNamekPill">On-Page SEO</div>
+                                            <div class="solutionsNamekPill">Schema Markup</div>
+                                            <div class="solutionsNamekPill">Content Optimization</div>
+                                            <div class="solutionsNamekPill">SEO Audit</div>
+                                            <div class="solutionsNamekPill">Meta Tag Optimization</div>
                                         </div>
                                     </div>
                                 </div>
@@ -423,31 +349,31 @@
                         </div>
                     </div>
                 </div>
-			</section>
+            </section>
 
-            <section class="fullscreen projectsShowCase py-4">	
+            <section class="fullscreen projectsShowCase position-relative py-3">
+                <img src="../assets/img/solutions_bg.jpg" loading="lazy" height="500" width="1400" class="image" alt="blue and black gradient theme background">
                 <div class="flex_align_center h-100 container-lg wrapper z-1 position-relative">
-                    <div>
-                        <h2 class="text-start my-1 fw-semibold text_light">Our amazing creations</h2>
-                        <p class="text-start fs_5 my-1 text-white-50">Discover the creativity and craftsmanship behind our remarkable projects that showcase innovation, dedication, and a passion for excellence.</p>
+                    <div class="w-100">
+                        <h2 class="text-center fs-1 my-1 fw-medium text_light">Check out some of my <span class="text_blue">proudest creations</span></h2>
                         <div class="row my-3">
                             <div class="col-lg-7 col-md-6 col-12">
                                 <div class="text-wrap">
                                     <div class="services_panel_text">
                                         <div class="projectCard">
                                             <p class="fs-4 fw-medium my-1 text_light">TutorsElevenPlus</p>
-                                            <p class="my-1 text-white-50">TutorsElevenPlus empowers UK children with tailored resources for success in their 11+ exams.</p>
+                                            <p class="my-1 text-white-50">TutorsElevenPlus empowers UK children by providing tailored resources to help them excel in their 11+ exams.</p>
                                             <div class="d-flex align-items-center gap-2 flex-wrap my-3">
-                                                <div class="projectServicePill">E-Learning</div>
+                                                <div class="projectServicePill">Personalized Learning</div>
                                                 <div class="projectServicePill">Boost Learning</div>
-                                                <div class="projectServicePill">11+ learning Platform</div>
+                                                <div class="projectServicePill">11+ Exam Resources</div>
                                             </div>
                                         </div>
                                     </div> 
                                     <div class="services_panel_text">
                                         <div class="projectCard">
                                             <p class="fs-4 fw-medium my-1 text_light">Trolleymate</p>
-                                            <p class="my-1 text-white-50">Convenient grocery delivery service ensuring fresh produce and essentials arrive at your doorstep swiftly.</p>
+                                            <p class="my-1 text-white-50">Trolleymate makes grocery shopping effortless, delivering fresh produce and essentials straight to your doorstep.</p>
                                             <div class="d-flex align-items-center gap-2 flex-wrap my-3">
                                                 <div class="projectServicePill">Grocery Delivery</div>
                                                 <div class="projectServicePill">Same-day Delivery</div>
@@ -458,7 +384,7 @@
                                     <div class="services_panel_text orange-text">
                                         <div class="projectCard">
                                             <p class="fs-4 fw-medium my-1 text_light">InterStateX</p>
-                                            <p class="my-1 text-white-50">Comprehensive transport solutions provider delivering efficient logistics services for industries in the USA.</p>
+                                            <p class="my-1 text-white-50">InterStateX provides comprehensive logistics solutions, delivering efficient transport services across industries in the USA.</p>
                                             <div class="d-flex align-items-center gap-2 flex-wrap my-3">
                                                 <div class="projectServicePill">Logistics</div>
                                                 <div class="projectServicePill">Transport Solutions</div>
@@ -469,7 +395,7 @@
                                     <div class="services_panel_text purple-text">
                                         <div class="projectCard">
                                             <p class="fs-4 fw-medium my-1 text_light">Oneli Builders</p>
-                                            <p class="my-1 text-white-50">Quality house builders creating beautiful, sustainable homes tailored to client needs in the UK.</p>
+                                            <p class="my-1 text-white-50">Oneli Builders crafts beautiful, sustainable homes that are custom-designed to meet the unique needs of clients in the UK.</p>
                                             <div class="d-flex align-items-center gap-2 flex-wrap my-3">
                                                 <div class="projectServicePill">Construction</div>
                                                 <div class="projectServicePill">Project Managment</div>
@@ -481,10 +407,10 @@
                             </div>
                             <div class="col-lg-5 col-md-6 col-12">
                                 <div class="p-wrap">
-                                    <div class="services_panel" id="tutorsElevenPlus"></div> 
-                                    <div class="services_panel" id="trolleymate"></div>
-                                    <div class="services_panel" id="interstate"></div> 
-                                    <div class="services_panel" id="oneli"></div> 
+                                    <div class="services_panel" loading="lazy" id="tutorsElevenPlus"></div> 
+                                    <div class="services_panel" loading="lazy" id="trolleymate"></div>
+                                    <div class="services_panel" loading="lazy" id="interstate"></div> 
+                                    <div class="services_panel" loading="lazy" id="oneli"></div> 
                                 </div>
                             </div>
                         </div>
@@ -492,142 +418,33 @@
                 </div>
 			</section>
 
-            <section class="fullscreen py-5">
+            <section class="bg_texture pt-5">
 				<div class="flex_align_center h-100 container-lg wrapper z-1 position-relative">
-                    <div>
-                        <h2 class="my-1 fw-semibold text_light">Our tailored development packages</h2>
-                        <p class="fs_5 my-1 text-white-50">Discover our tailored development packages designed to meet your unique needs and budget. Explore each option to find the best fit for you.</p>
+                    <div class="w-100">
+                        <h2 class="my-1 fs-1 fw-medium text_light">What my clients says</h2>
+                        <p class="my-1 text-white-50">The kind words from my clients highlight the value I bring to each project and the dedication I put into every detail.</p>
                         <div class="row my-4 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-10 col-12 my-3">
-                                <div class="packagesCard p-3">
-                                    <p class="text-white-50 my-1">Basic</p>
-                                    <p class="fs-2 text-white fw-medium my-1 mb-2">$299<span class="fw-normal text_lighter fs_6">/project</span></p>
-                                    <p class="text_light fs_6 fw-medium my-1">FEATURES</p>
-                                    <ul class="list-unstyled mb-3">
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Website or App Development</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Responsive Design</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Basic SEO Optimization</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">User-Friendly Interface</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">CMS Integration</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Advanced Features and Functionality</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Standard Security Measures</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Maintenance and Support</span>
-                                        </li>
-                                    </ul>
-                                    <div class="my-2"><button class="w-100 btn_primary fs_6">Get a Quote</button></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-10 col-12 my-3">
-                                <div class="packagesCard p-3">
-                                    <div class="d-flex align-items-center justify-content-between my-1">
-                                        <p class="text-white-50 m-0">Standard</p>
-                                        <div class="p-1 px-2 rounded-pill bg_orange inline_flex">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--dark)"><path d="M16.5 8c0 1.5-.5 3.5-2.9 4.3.7-1.7.8-3.4.3-5-.7-2.1-3-3.7-4.6-4.6-.4-.3-1.1.1-1 .7 0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5 3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5.8 5.9 5 7.5 7 7.5 1.7 0 5-1.2 5-6.4 0-3.1-1.3-5.5-2.4-6.9-.3-.5-1-.2-1.1.3"></path></svg>
-                                            <span class="fw-medium fs_xs text_dark">Most Popular</span>
-                                        </div>
+                            <div class="col-md-6 col-12 col-12 my-3">
+                                <div class="testimonialCard p-3">
+                                    <div class="testimonialAvatar bg_primary mb-2">A</div>
+                                    <p class="fs-5 text-white fw-medium my-0">Alex Hovhannisyan</p>
+                                    <p class="text_lighter fs_6 fw-light my-0">ResolveX Team</p>
+                                    <div class="my-3">
+                                        <p class="m-0 fs_6 text_light fst-italic">Thank you, Abdul, it's a pleasure to work with him. He did great work, at the specified time. Of course, I will work with him again in the future.</p>
                                     </div>
-                                    <p class="fs-2 text-white fw-medium my-1 mb-2">$999<span class="fw-normal text_lighter fs_6">/project</span></p>
-                                    <p class="text_light fs_6 fw-medium my-1">FEATURES</p>
-                                    <ul class="list-unstyled mb-3">
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Everything in the Basic Package</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Enhanced Features and Functionality</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">CMS Integration</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Standard Security Measures</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Custom Design and Branding</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Advanced Features and Integrations</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ff4646"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-                                            <span class="fs_xs text_lighter">Comprehensive Security</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Maintenance and Support</span>
-                                        </li>
-                                    </ul>
-                                    <div class="my-2"><button class="w-100 btn_primary fs_6">Get a Quote</button></div>
+                                    <p class="text-end small fw-light text_lighter my-1">May 29, 2024</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-10 col-12 my-3">
-                                <div class="packagesCard p-3">
-                                    <p class="text-white-50 my-1">Premium</p>
-                                    <p class="fs-2 text-white fw-medium my-1 mb-2">$1999<span class="fw-normal text_lighter fs_6">/project</span></p>
-                                    <p class="text_light fs_6 fw-medium my-1">FEATURES</p>
-                                    <ul class="list-unstyled mb-3">
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Everything in the Standard Package</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Fully Custom Web/App Development</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">E-Commerce Integration</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">API Integration</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Custom Design and Branding</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Advanced Features and Integrations</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Comprehensive Security</span>
-                                        </li>
-                                        <li class="my-2 d-flex align-items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #61fd6a"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
-                                            <span class="fs_xs text_lighter">Ongoing Maintenance and Support</span>
-                                        </li>
-                                    </ul>
-                                    <div class="my-2"><button class="w-100 btn_primary fs_6">Get a Quote</button></div>
+                            <div class="col-md-6 col-12 col-12 my-3">
+                                <div class="testimonialCard p-3">
+                                    <div class="testimonialAvatar bg_primary mb-2">J</div>
+                                    <p class="fs-5 text-white fw-medium my-0">James Lewis</p>
+                                    <p class="text_lighter fs_6 fw-light my-0">Rmdigital Group</p>
+                                    <div class="my-3">
+                                        <p class="m-0 fs_6 text_light fst-italic">Thank you for your hard work.</p>
+                                        <br>
+                                    </div>
+                                    <p class="text-end small fw-light text_lighter my-1">Jun 26, 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -635,69 +452,97 @@
                 </div>
 			</section>
 
-            <section class="fullscreen py-5">
-                <div class="flex_align_center h-100">
-                    <div class="container-lg wrapper">
-                        <div class="row align-items-center">
+            <section class="bg_texture py-5">
+				<div class="flex_align_center h-100 container-lg wrapper z-1 position-relative">
+                    <div class="w-100">
+                        <div class="row align-items-center mb-4">
                             <div class="col-lg-7 col-12 my-2">
-                                <h2 class="my-1 fw-semibold text_light">Transforming businesses with technology</h2>
-                                <p class="text-white-50 my-2 mb-3">Capital Technologies is software and IT services company helping other companies redefine their digital possibilities. With our team of experts, we are building the digital infrastructure of our clients positioning them to be the market leaders of their respective industries.</p>
-                                <button class="btn_primary inline_flex gap-1 fs_6 arrowIconBtn my-2">
-                                    <span>About us</span>
+                                <h2 class="my-1 fs-1 fw-medium text_light">About me</h2>
+                                <p class="text-white-50 fw-light my-2 mb-3">I’m a passionate front-end developer and web designer who loves bringing visions to life. My focus is on crafting websites that don’t just look great but feel as seamless and engaging as an app. Creating responsive, user-friendly experiences that genuinely connect with users is at the heart of what I do.</p>
+                                <p class="text-white-50 fw-light my-2 mb-3">I thrive on collaboration and blending creativity with technical know-how to turn ideas into digital experiences that make a real impact. Let’s work together to create a website that not only captures attention but also brings your vision to life in a way that truly resonates.</p>
+                                <a href="about.html" class="btn_outline_primary inline_flex gap-1 fs_6 arrowIconBtn my-2" aria-label="get know about me">
+                                    <span>About me</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                </button>
+                                </a>
                             </div>
                             <div class="col-lg-5 col-12 my-2">
-                                <div class="row">
-                                    <div class="col-6 text-center py-4">
-                                        <p class="fs-3 fw-semibold text_light my-0">200+</p>
-                                        <p class="text_lighter my-0 fs_6">Projects Delivered</p>
+                                <div class="d-flex">
+                                    <div class="timelineContainer">
+                                        <div class="timeline"></div>
                                     </div>
-                                    <div class="col-6 text-center py-4">
-                                        <p class="fs-3 fw-semibold text_light my-0">10,000+</p>
-                                        <p class="text_lighter my-0 fs_6">Working Hours</p>
-                                    </div>
-                                    <div class="col-6 text-center py-4">
-                                        <p class="fs-3 fw-semibold text_light my-0">150+</p>
-                                        <p class="text_lighter my-0 fs_6">Satisfied Clients</p>
-                                    </div>
-                                    <div class="col-6 text-center py-4">
-                                        <p class="fs-3 fw-semibold text_light my-0">7+</p>
-                                        <p class="text_lighter my-0 fs_6">Years of Experience</p>
+                                    <div class="w-auto">
+                                        <div class="aboutContentBox position-relative my-4">
+                                            <div class="aboutContentDot"></div>
+                                            <p class="fs-5 fw-medium text_light mb-1">Design</p>
+                                            <p class="small fw-light text_lighter mb-1">Creating intuitive, engaging interfaces that enhance user experience seamlessly.</p>
+                                        </div>
+                                        <div class="aboutContentBox position-relative my-4">
+                                            <div class="aboutContentDot"></div>
+                                            <p class="fs-5 fw-medium text_light mb-1">Develop</p>
+                                            <p class="small fw-light text_lighter mb-1">Building responsive, high-performance applications that ensure seamless user interactions.</p>
+                                        </div>
+                                        <div class="aboutContentBox position-relative my-4">
+                                            <div class="aboutContentDot"></div>
+                                            <p class="fs-5 fw-medium text_light mb-1">Deploy</p>
+                                            <p class="small fw-light text_lighter mb-1">Launching polished, accessible solutions that deliver reliable, user-centered results.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="my-4">
-                            <div class="heroBanner p-md-4 p-3">
-                                <div class="position-relative z-1 text-center my-4">
-                                    <p class="my-1 fw-medium fs-3 text_light">Ready to grow your business?</p>
-                                    <p class="text-white-50 my-2">Book a consultation with our expert team today to get the best solution for your business, helping you achieve growth and drive it to the next level of success.</p>
-                                    <button class="btn_primary inline_flex gap-1 fs_6 arrowIconBtn my-2">
-                                        <span>Contact us</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                                    </button>
-                                </div>
-                                <img src="../assets/img/bg-layer.webp" alt="" class="bannerBg">
+                        <div class="heroBanner p-md-4 p-3">
+                            <div class="position-relative z-1 text-center my-4">
+                                <p class="my-1 text_lighter">Bring your next project to life!</p>
+                                <h3 class="my-1 fw-medium text_light">Let's discuss your next project!</h3>
+                                <p class="text-white-50 my-2 mb-3">I’m ready to bring your ideas to life and collaborate on creating something unique and impactful. Reach out today, and together we’ll transform your vision into a successful and exciting project.</p>
+                                <a href="contact.html" class="btn_primary my-2 inline_flex gap-1 arrowIconBtn" aria-label="Get in touch with me">
+                                    <span>Get in touch</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20" height="20" viewBox="0 0 24 24">
+                                        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                                    </svg>
+                                </a>
                             </div>
+                            <img src="../assets/img/bg-layer.webp" loading="lazy" height="400" width="1200" alt="layers background shade" class="bannerBg">
                         </div>
                     </div>
                 </div>
 			</section>
 
-            <footer class="footer py-5">
-                <p class="fs-5 text-center text_light">footer</p>
-			</footer>
+            <footer class="footer">
+                <div class="py-2 footerShade">
+                    <div class="container-lg wrapper">
+                        <div class="d-flex align-items-center justify-content-between py-3 border_light_bottom mb-3">
+                            <p class="fw-medium text_light m-0">Connect with me</p>
+                            <div class="d-flex align-items-center gap-2">
+                                <a aria-label="connect with me on whatsapp" href="https://wa.me/923130215362?text=Hello%2C%20I%20have%20a%20project%20in%20mind%20and%20am%20interested%20in%20discussing%20it%20with%20you.%20Would%20you%20be%20able%20to%20help%20me%20with%20it%3F" class="social_links_box bg_whatsapp">
+                                    <i class='bx bxl-whatsapp'></i>
+                                </a>
+                                <a aria-label="connect with me on email" href="mailto:sayyedxworks@gmail.com" target="_blank" class="social_links_box bg_envelope">
+                                    <i class='bx bx-envelope' ></i>
+                                </a>
+                                <a aria-label="connect with me on upwork" href="https://www.upwork.com/freelancers/abdula61?p=1797337908499525632" target="_blank" class="social_links_box bg_upwork">
+                                    <i class='bx bxl-upwork'></i>
+                                </a>
+                                <a aria-label="connect with me on github" href="https://github.com/AbdullAhad123" target="_blank" class="social_links_box bg_github">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                                <a aria-label="connect with me on stack overflow" href="https://stackoverflow.com/users/21454095/abdul-ahad" target="_blank" class="social_links_box bg_stackoverflow">
+                                    <i class='bx bxl-stack-overflow'></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text_lighter text-center small my-3"> Copyright &copy; 2024 <a aria-label="syed abdul ahad portfolio" href="index.html" class="text-decoration-none text_lighter">Syed Abdul Ahad</a>. All rights reserved </p>
+                    </div>
+                </div>
+            </footer>
 
 		</div>
-        
     </div>
-
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/scroll.js"></script>

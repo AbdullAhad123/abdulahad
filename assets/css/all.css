@@ -38,6 +38,8 @@ body {
 .wrapper {
     height: auto;
     max-width: 1200px !important;
+    padding: 0 1.2rem !important;
+    margin: auto !important;
 }
 
 .inline_flex {

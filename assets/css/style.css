@@ -344,7 +344,7 @@
 
 /* about  */
 .timelineContainer {
-    width: 50px;
+    min-width: 50px;
 }
 
 .timeline {
@@ -362,7 +362,7 @@
     border-radius: 100px;
     position: absolute;
     top: 50%;
-    left: -28px;
+    left: -35px;
     transform: translateY(-50%);
     animation: drop_box 5s linear infinite;
 }
